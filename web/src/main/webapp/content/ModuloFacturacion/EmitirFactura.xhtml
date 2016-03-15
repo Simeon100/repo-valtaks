@@ -1,0 +1,164 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<ui:composition template="/WEB-INF/TemplateModFacturacion.xhtml"
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:p="http://primefaces.org/ui">
+
+    <ui:define name="bodyJR">     
+        <h:form id="form_emifac">
+            <h2>Facturacion / Venta</h2>
+            <center><table border="0">
+                <tbody>
+                    <tr>
+                        <td>Numero de Doc: </td>
+                        <td><p:inputText type="text"></p:inputText></td>
+                    </tr>
+                    <tr style="height: 15px"></tr>
+                    <tr>
+                        <td>Tipo de Venta: </td>
+                        <td><p:selectOneMenu>
+                            <f:selectItem itemValue="1" itemLabel="CREDITO" />
+                            <f:selectItem itemValue="1" itemLabel="CONTADO" />
+                        </p:selectOneMenu></td>
+                    </tr>
+                    <tr>
+                        <td>Vendedor: </td>
+                        <td><p:selectOneMenu>
+                            <f:selectItem itemValue="1" itemLabel="" />
+                            <f:selectItem itemValue="1" itemLabel="Vendedor1" />
+                            <f:selectItem itemValue="1" itemLabel="Vendedor2" />
+                        </p:selectOneMenu></td>
+                    </tr>
+                    <tr>
+                        <td>Fecha: </td>
+                        <td><p:inputText type="date"></p:inputText></td>
+                    </tr>
+                    <tr>
+                        <td>Cliente: </td>
+                        <td><p:selectOneMenu>
+                            <f:selectItem itemValue="1" itemLabel="" />
+                            <f:selectItem itemValue="1" itemLabel="Cliente1" />
+                            <f:selectItem itemValue="1" itemLabel="Cliente2" />
+                        </p:selectOneMenu></td>
+                        <td><p:commandButton type="button" value="Buscar Cliente" style="font-size: 14px; color: cadetblue;"/></td>
+                        <td><p:commandButton type="button" value="Nuevo Cliente" style="font-size: 14px; color: cadetblue;"/></td>
+                    </tr>
+                    <tr>
+                        <td>Direccion: </td>
+                        <td><p:inputText type="text"></p:inputText></td>
+                    </tr>
+                    <tr>
+                        <td>Fac/Bol/GR: </td>
+                        <td><p:selectOneMenu>
+                            <f:selectItem itemValue="1" itemLabel="FACTURA" />
+                            <f:selectItem itemValue="1" itemLabel="BOLETA" />
+                            <f:selectItem itemValue="1" itemLabel="GUIA DE REMISION" />
+                        </p:selectOneMenu></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><p:commandButton type="button" value="Buscar Producto" style="font-size: 14px; color: cadetblue;"/></td>
+                        <td><p:commandButton type="button" value="Producto Nuevo" style="font-size: 14px; color: cadetblue;"/></td>
+                        <td></td>
+                    </tr>
+                    <tr style="height: 20px">
+                    </tr>
+                </tbody>
+                </table></center>
+            <center><h:dataTable value="" var="usuario" border="1">
+                <h:column>
+                    <f:facet name="header">
+                        <h:outputText value="CODIGO"></h:outputText>
+                    </f:facet>
+                    <h:inputText style="width: 100px"></h:inputText>
+                    <h:inputText style="width: 100px"></h:inputText>
+                </h:column>
+                <h:column>
+                    <f:facet name="header">
+                       <h:outputText value="PRODUCTO"></h:outputText>
+                    </f:facet>
+                    <h:inputText style="width: 300px"></h:inputText>
+                    <h:inputText style="width: 300px"></h:inputText>
+                </h:column>
+                <h:column>
+                    <f:facet name="header">
+                       <h:outputText value="UNID"></h:outputText>
+                    </f:facet>
+                    <h:inputText style="width: 100px"></h:inputText>
+                    <h:inputText style="width: 100px"></h:inputText>
+                </h:column>
+                <h:column>
+                    <f:facet name="header">
+                       <h:outputText value="CANT"></h:outputText>
+                    </f:facet>
+                    <h:inputText style="width: 100px"></h:inputText>
+                    <h:inputText style="width: 100px"></h:inputText>
+                </h:column>
+                <h:column>
+                    <f:facet name="header">
+                       <h:outputText value="P/UNIT"></h:outputText>
+                    </f:facet>
+                    <h:inputText style="width: 100px"></h:inputText>
+                    <h:inputText style="width: 100px"></h:inputText>
+                </h:column>
+                <h:column>
+                    <f:facet name="header">
+                       <h:outputText value="SUBTOTAL"></h:outputText>
+                    </f:facet>
+                    <h:inputText style="width: 100px"></h:inputText>
+                    <h:inputText style="width: 100px"></h:inputText>
+                </h:column>
+                <h:column>
+                    <f:facet name="header">
+                       <h:outputText value="DSCTO%"></h:outputText>
+                    </f:facet>
+                    <h:inputText style="width: 100px"></h:inputText>
+                    <h:inputText style="width: 100px"></h:inputText>
+                </h:column>
+                <h:column>
+                    <f:facet name="header">
+                       <h:outputText value="SUBTOTAL"></h:outputText>
+                    </f:facet>
+                    <h:inputText style="width: 100px"></h:inputText>
+                    <h:inputText style="width: 100px"></h:inputText>
+                </h:column>
+            </h:dataTable></center>
+            <br></br>
+            <h:outputLabel>SON: Y 00/100 SOLES</h:outputLabel>
+            <br></br>
+            <table border="1" align="right">
+                <tbody>
+                    <tr>
+                        <td>SUBTOTAL:</td>
+                        <td><h:inputText></h:inputText></td>
+                    </tr>
+                    <tr>
+                        <td>IGV:</td>
+                        <td><h:inputText></h:inputText></td>
+                    </tr>
+                    <tr>
+                        <td>TOTAL:</td>
+                        <td><h:inputText></h:inputText></td>
+                    </tr>
+                </tbody>
+            </table>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <center><table border="0">
+                <tbody>
+                    <tr>
+                        <td><p:commandButton type="button" value="Limpiar" style="font-size: 14px; color: cadetblue;"/></td>
+                        <td><p:commandButton type="button" value="Solo Guardar" style="font-size: 14px; color: cadetblue;"/></td>
+                        <td><p:commandButton type="button" value="Guardar e Imprimir" style="font-size: 14px; color: cadetblue;"/></td>
+                    </tr>
+                </tbody>
+                </table></center>
+        </h:form>
+    </ui:define>
+</ui:composition>

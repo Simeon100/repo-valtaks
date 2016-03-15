@@ -14,9 +14,9 @@
         </h:head>
 
         <h:body>
+            
             <p:layout fullPage="true">
-                <!-- <p:layoutUnit position="north" size="100" closable="true" collapsible="true" > -->
-                <!-- position="north" : Muestra los datos en la parte de arriba, en la cabezera  -->
+                
                 <p:layoutUnit position="north" size="125" resizable="true" closable="true" collapsible="true">
                     <table align="center">
                         <tr>
@@ -35,31 +35,8 @@
                         <center style="font-size: 14px;">&copy; 2016 Valtaks | All Rights Reserved</center>
                     </div>
                 </p:layoutUnit>
-                
-                <!-- <p:layoutUnit position="west" size="100" closable="true" collapsible="true" > -->
-                <!-- position="west" : Muestra los datos en la parte izquierda (Las opciones para el usuario)  -->
-                <p:layoutUnit position="west" size="250" header="Opciones" collapsible="true">
-                    <p:menu>
-                        <p:submenu label="Opciones de Operacion">
-                            <p:menuitem value="Ingreso Productos Terminados" url="IngresoProductoTerminado.xhtml" />
-                            <p:menuitem value="Ingreso Productos No Terminados" url="ModuloAlmacen.xhtml" />
-                            <p:menuitem value="Salida Productos Terminados" url="SalidaProductoTerminado.xhtml" />
-                            <p:menuitem value="Salida Productos No Terminados" url="" />
-                            <p:menuitem value="Productos" url="ModuloAlmacen.xhtml" />
-                            <p:menuitem value="Proveedores" url="ModuloAlmacen.xhtml" />
-                            <p:menuitem value="Control de Stock" url="ModuloAlmacen.xhtml" />
-                            <p:menuitem value="Reportes" url="ModuloAlmacen.xhtml" />
-                        </p:submenu>
-                    </p:menu>
-                    <p:menu>
-                        <p:submenu label="Usuario">
-                            <p:menuitem value="Perfil" url="" />
-                            <p:menuitem value="Salir" url="" />
-                        </p:submenu>
-                    </p:menu>
-                </p:layoutUnit>
 
-                <p:layoutUnit position="center" >
+                <p:layoutUnit position="center">
                     <ui:insert name="bodyJR">Aqui cambia el contenido . . .</ui:insert>
                 </p:layoutUnit>
             </p:layout>
